@@ -1,16 +1,11 @@
-//
 //  AppDelegate.swift
 //  neobis_front_auth
-//
-//  Created by Askar Soronbekov on 25/9/23.
-//
+//  Created by Askar Soronbekov
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

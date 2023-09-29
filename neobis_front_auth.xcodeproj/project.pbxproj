@@ -13,6 +13,19 @@
 		04C0E53C2AC154ED008CB682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C0E53A2AC154ED008CB682 /* Main.storyboard */; };
 		04C0E53E2AC154EE008CB682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C0E53D2AC154EE008CB682 /* Assets.xcassets */; };
 		04C0E5412AC154EE008CB682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C0E53F2AC154EE008CB682 /* LaunchScreen.storyboard */; };
+		04C0E54B2AC1553A008CB682 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04C0E54A2AC1553A008CB682 /* SnapKit */; };
+		04C0E54E2AC15596008CB682 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E54D2AC15596008CB682 /* SplashScreenView.swift */; };
+		04C84A9C2AC64B3E0022A480 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04C84A9B2AC64B3E0022A480 /* Alamofire */; };
+		04C84A9F2AC64B770022A480 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 04C84A9E2AC64B770022A480 /* AlamofireImage */; };
+		04C84AA22AC64BC10022A480 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AA12AC64BC10022A480 /* MainView.swift */; };
+		04C84AA42AC64BE70022A480 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AA32AC64BE70022A480 /* MainViewController.swift */; };
+		04C84AA72AC64C4E0022A480 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AA62AC64C4E0022A480 /* LoginView.swift */; };
+		04C84AA92AC64C8B0022A480 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AA82AC64C8B0022A480 /* LoginViewController.swift */; };
+		04C84AAB2AC64C9F0022A480 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AAA2AC64C9F0022A480 /* LoginViewModel.swift */; };
+		04C84AAE2AC64D1C0022A480 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AAD2AC64D1C0022A480 /* RegistrationView.swift */; };
+		04C84AB02AC64D3B0022A480 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AAF2AC64D3B0022A480 /* RegistrationViewController.swift */; };
+		04C84AB32AC64FC10022A480 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AB22AC64FC10022A480 /* AnimatedTextField.swift */; };
+		04C84AB62AC6508D0022A480 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AB52AC6508D0022A480 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,16 @@
 		04C0E53D2AC154EE008CB682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C0E5402AC154EE008CB682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C0E5422AC154EE008CB682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0E54D2AC15596008CB682 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		04C84AA12AC64BC10022A480 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		04C84AA32AC64BE70022A480 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04C84AA62AC64C4E0022A480 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		04C84AA82AC64C8B0022A480 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04C84AAA2AC64C9F0022A480 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		04C84AAD2AC64D1C0022A480 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		04C84AAF2AC64D3B0022A480 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		04C84AB22AC64FC10022A480 /* AnimatedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
+		04C84AB52AC6508D0022A480 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C0E54B2AC1553A008CB682 /* SnapKit in Frameworks */,
+				04C84A9C2AC64B3E0022A480 /* Alamofire in Frameworks */,
+				04C84A9F2AC64B770022A480 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +82,8 @@
 		04C0E5332AC154ED008CB682 /* neobis_front_auth */ = {
 			isa = PBXGroup;
 			children = (
+				04C84AB12AC64F860022A480 /* CustomTextFields */,
+				04C0E5482AC15518008CB682 /* View */,
 				04C0E5342AC154ED008CB682 /* AppDelegate.swift */,
 				04C0E5362AC154ED008CB682 /* SceneDelegate.swift */,
 				04C0E5382AC154ED008CB682 /* ViewController.swift */,
@@ -65,6 +93,70 @@
 				04C0E5422AC154EE008CB682 /* Info.plist */,
 			);
 			path = neobis_front_auth;
+			sourceTree = "<group>";
+		};
+		04C0E5482AC15518008CB682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AB42AC6507A0022A480 /* Profile */,
+				04C84AA02AC64B8E0022A480 /* MainScreen */,
+				04C0E54C2AC15573008CB682 /* SplashScreen */,
+				04C84AA52AC64C3D0022A480 /* Login */,
+				04C84AAC2AC64CF90022A480 /* Registratoin */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C0E54C2AC15573008CB682 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04C0E54D2AC15596008CB682 /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		04C84AA02AC64B8E0022A480 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AA12AC64BC10022A480 /* MainView.swift */,
+				04C84AA32AC64BE70022A480 /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		04C84AA52AC64C3D0022A480 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AA62AC64C4E0022A480 /* LoginView.swift */,
+				04C84AA82AC64C8B0022A480 /* LoginViewController.swift */,
+				04C84AAA2AC64C9F0022A480 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04C84AAC2AC64CF90022A480 /* Registratoin */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AAD2AC64D1C0022A480 /* RegistrationView.swift */,
+				04C84AAF2AC64D3B0022A480 /* RegistrationViewController.swift */,
+			);
+			path = Registratoin;
+			sourceTree = "<group>";
+		};
+		04C84AB12AC64F860022A480 /* CustomTextFields */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AB22AC64FC10022A480 /* AnimatedTextField.swift */,
+			);
+			path = CustomTextFields;
+			sourceTree = "<group>";
+		};
+		04C84AB42AC6507A0022A480 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AB52AC6508D0022A480 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +175,11 @@
 			dependencies = (
 			);
 			name = neobis_front_auth;
+			packageProductDependencies = (
+				04C0E54A2AC1553A008CB682 /* SnapKit */,
+				04C84A9B2AC64B3E0022A480 /* Alamofire */,
+				04C84A9E2AC64B770022A480 /* AlamofireImage */,
+			);
 			productName = neobis_front_auth;
 			productReference = 04C0E5312AC154ED008CB682 /* neobis_front_auth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +208,11 @@
 				Base,
 			);
 			mainGroup = 04C0E5282AC154ED008CB682;
+			packageReferences = (
+				04C0E5492AC1553A008CB682 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				04C84A9A2AC64B3E0022A480 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04C84A9D2AC64B770022A480 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 04C0E5322AC154ED008CB682 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +241,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C0E5392AC154ED008CB682 /* ViewController.swift in Sources */,
+				04C84AB62AC6508D0022A480 /* ProfileView.swift in Sources */,
+				04C84AA72AC64C4E0022A480 /* LoginView.swift in Sources */,
 				04C0E5352AC154ED008CB682 /* AppDelegate.swift in Sources */,
+				04C84AB02AC64D3B0022A480 /* RegistrationViewController.swift in Sources */,
 				04C0E5372AC154ED008CB682 /* SceneDelegate.swift in Sources */,
+				04C84AA92AC64C8B0022A480 /* LoginViewController.swift in Sources */,
+				04C84AA42AC64BE70022A480 /* MainViewController.swift in Sources */,
+				04C84AA22AC64BC10022A480 /* MainView.swift in Sources */,
+				04C0E54E2AC15596008CB682 /* SplashScreenView.swift in Sources */,
+				04C84AAB2AC64C9F0022A480 /* LoginViewModel.swift in Sources */,
+				04C84AB32AC64FC10022A480 /* AnimatedTextField.swift in Sources */,
+				04C84AAE2AC64D1C0022A480 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +470,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04C0E5492AC1553A008CB682 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		04C84A9A2AC64B3E0022A480 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		04C84A9D2AC64B770022A480 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04C0E54A2AC1553A008CB682 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C0E5492AC1553A008CB682 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		04C84A9B2AC64B3E0022A480 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C84A9A2AC64B3E0022A480 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		04C84A9E2AC64B770022A480 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C84A9D2AC64B770022A480 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04C0E5292AC154ED008CB682 /* Project object */;
 }
