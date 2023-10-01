@@ -26,6 +26,12 @@ class RegistrationViewController: UIViewController {
         if contentView.enterButton.backgroundColor != UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1) {
             guard let userName = contentView.nameField.text else { return }
             guard let email = contentView.mailField.text else { return }
+            let vc = PasswordViewController(registerProtocol: PasswordViewModel(userName: userName, email: email))
+            
+            vc.username = contentView.nameField.text ?? ""
+            vc.email = contentView.mailField.text ?? ""
+            
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -40,5 +46,4 @@ class RegistrationViewController: UIViewController {
         }
     }
 }
-
 

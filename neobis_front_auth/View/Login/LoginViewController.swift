@@ -8,6 +8,16 @@ import SnapKit
 class LoginViewController: UIViewController {
     
     let mainView = LoginView()
+    var loginProtocol: LoginProtocol!
+    
+    init(loginProtocol: LoginProtocol) {
+        self.loginProtocol = loginProtocol
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +27,16 @@ class LoginViewController: UIViewController {
         mainView.registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
         mainView.enterButton.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
         
+        loginProtocol.loginResult = { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    self?.handleSuccessfulLogin(data)
+                case .failure(let error):
+                    self?.handleLoginFailure(error)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +52,22 @@ class LoginViewController: UIViewController {
                 print("Email or password is empty.")
                 return
             }
+            
+            loginProtocol.login(username: name, password: password)
         }
+    }
+    
+    func handleSuccessfulLogin(_ data: Data) {
+
+        let vc = CustomTabBarC()
+        vc.modalPresentationStyle = .fullScreen
+        
+//        if let viewControllers = vc.viewControllers {
+//            let lastIndex = viewControllers.count - 1
+//            vc.selectedIndex = lastIndex
+//        }
+        
+        present(vc, animated: true, completion: nil)
     }
     
     func handleLoginFailure(_ error: Error) {
@@ -61,4 +96,3 @@ class LoginViewController: UIViewController {
         }
     }
 }
-

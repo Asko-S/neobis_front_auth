@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E47932AC6CBB30047B78A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47922AC6CBB30047B78A /* Model.swift */; };
+		040E47962AC6D7F30047B78A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47952AC6D7F30047B78A /* APIService.swift */; };
+		040E47992AC6D9D50047B78A /* ApiExtencions .swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47982AC6D9D50047B78A /* ApiExtencions .swift */; };
+		040E479F2AC6DB960047B78A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E479E2AC6DB960047B78A /* AuthManager.swift */; };
+		040E47A22AC6DD4D0047B78A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47A12AC6DD4D0047B78A /* CustomTabBarController.swift */; };
+		040E47A42AC6DDBE0047B78A /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47A32AC6DDBE0047B78A /* CustomTabBar.swift */; };
+		042F29452AC851E800E79221 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29442AC851E800E79221 /* PasswordView.swift */; };
+		042F29472AC8521800E79221 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29462AC8521800E79221 /* PasswordViewController.swift */; };
+		042F29492AC8524000E79221 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29482AC8524000E79221 /* PasswordViewModel.swift */; };
+		042F294B2AC85F4E00E79221 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F294A2AC85F4E00E79221 /* ProfileViewController.swift */; };
+		042F294D2AC85FB100E79221 /* DataExtencions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F294C2AC85FB100E79221 /* DataExtencions.swift */; };
+		042F29512AC8606100E79221 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29502AC8606100E79221 /* GetUserData.swift */; };
+		042F29542AC861D600E79221 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29532AC861D600E79221 /* FinishRegistrationViewController.swift */; };
+		042F29562AC861E700E79221 /* FinishRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29552AC861E700E79221 /* FinishRegistrationView.swift */; };
+		042F29592AC8629600E79221 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F29582AC8629600E79221 /* NumberView.swift */; };
+		042F295B2AC862A300E79221 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F295A2AC862A300E79221 /* NumberViewController.swift */; };
+		042F295D2AC862C300E79221 /* NumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F295C2AC862C300E79221 /* NumberViewModel.swift */; };
 		04C0E5352AC154ED008CB682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E5342AC154ED008CB682 /* AppDelegate.swift */; };
 		04C0E5372AC154ED008CB682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E5362AC154ED008CB682 /* SceneDelegate.swift */; };
 		04C0E5392AC154ED008CB682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E5382AC154ED008CB682 /* ViewController.swift */; };
@@ -26,9 +43,66 @@
 		04C84AB02AC64D3B0022A480 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AAF2AC64D3B0022A480 /* RegistrationViewController.swift */; };
 		04C84AB32AC64FC10022A480 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AB22AC64FC10022A480 /* AnimatedTextField.swift */; };
 		04C84AB62AC6508D0022A480 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84AB52AC6508D0022A480 /* ProfileView.swift */; };
+		04C84AEC2AC652280022A480 /* gothampro_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AB82AC652280022A480 /* gothampro_mediumitalic.ttf */; };
+		04C84AED2AC652280022A480 /* GothamPro-Narrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AB92AC652280022A480 /* GothamPro-Narrow-Bold.ttf */; };
+		04C84AEE2AC652280022A480 /* GothamPro-Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ABA2AC652280022A480 /* GothamPro-Narrow.ttf */; };
+		04C84AEF2AC652280022A480 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ABB2AC652280022A480 /* Nunito-Medium.ttf */; };
+		04C84AFB2AC652280022A480 /* GothamPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AC82AC652280022A480 /* GothamPro-LightItalic.ttf */; };
+		04C84AFC2AC652280022A480 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AC92AC652280022A480 /* Nunito-ExtraBoldItalic.ttf */; };
+		04C84AFD2AC652280022A480 /* gothampro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACA2AC652280022A480 /* gothampro_medium.ttf */; };
+		04C84AFE2AC652280022A480 /* GothamPro-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACB2AC652280022A480 /* GothamPro-MediumItalic.ttf */; };
+		04C84AFF2AC652280022A480 /* gothampro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACC2AC652280022A480 /* gothampro.ttf */; };
+		04C84B002AC652280022A480 /* GothamPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACD2AC652280022A480 /* GothamPro-Medium.ttf */; };
+		04C84B012AC652280022A480 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACE2AC652280022A480 /* Nunito-ExtraBold.ttf */; };
+		04C84B022AC652280022A480 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ACF2AC652280022A480 /* Nunito-ExtraLightItalic.ttf */; };
+		04C84B032AC652280022A480 /* GothamPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD02AC652280022A480 /* GothamPro-BlackItalic.ttf */; };
+		04C84B042AC652280022A480 /* GothamPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD12AC652280022A480 /* GothamPro-Black.ttf */; };
+		04C84B052AC652280022A480 /* GothamProNarrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD22AC652280022A480 /* GothamProNarrow-Bold.ttf */; };
+		04C84B062AC652280022A480 /* GothamPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD32AC652280022A480 /* GothamPro-BoldItalic.ttf */; };
+		04C84B072AC652280022A480 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD42AC652280022A480 /* Nunito-Light.ttf */; };
+		04C84B082AC652280022A480 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD52AC652280022A480 /* Nunito-Regular.ttf */; };
+		04C84B092AC652280022A480 /* gothampro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD62AC652280022A480 /* gothampro_bold.ttf */; };
+		04C84B0A2AC652280022A480 /* gothampro_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD72AC652280022A480 /* gothampro_black.ttf */; };
+		04C84B0B2AC652280022A480 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD82AC652280022A480 /* Nunito-SemiBold.ttf */; };
+		04C84B0C2AC652280022A480 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AD92AC652280022A480 /* Nunito-Bold.ttf */; };
+		04C84B0D2AC652280022A480 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADA2AC652280022A480 /* Nunito-BoldItalic.ttf */; };
+		04C84B0E2AC652280022A480 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADB2AC652280022A480 /* Nunito-Black.ttf */; };
+		04C84B0F2AC652280022A480 /* GothamProNarrow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADC2AC652280022A480 /* GothamProNarrow-Medium.ttf */; };
+		04C84B102AC652280022A480 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADD2AC652280022A480 /* Nunito-ExtraLight.ttf */; };
+		04C84B112AC652280022A480 /* gothampro_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADE2AC652280022A480 /* gothampro_italic.ttf */; };
+		04C84B122AC652280022A480 /* gothampro_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84ADF2AC652280022A480 /* gothampro_light.ttf */; };
+		04C84B132AC652280022A480 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE02AC652280022A480 /* Nunito-SemiBoldItalic.ttf */; };
+		04C84B142AC652280022A480 /* GothamPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE12AC652280022A480 /* GothamPro-Italic.ttf */; };
+		04C84B152AC652280022A480 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE22AC652280022A480 /* Nunito-BlackItalic.ttf */; };
+		04C84B162AC652280022A480 /* GothamPro-Narrow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE32AC652280022A480 /* GothamPro-Narrow-Medium.ttf */; };
+		04C84B172AC652280022A480 /* gothampro_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE42AC652280022A480 /* gothampro_lightitalic.ttf */; };
+		04C84B182AC652280022A480 /* GothamPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE52AC652280022A480 /* GothamPro-Light.ttf */; };
+		04C84B192AC652280022A480 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE62AC652280022A480 /* Nunito-Italic.ttf */; };
+		04C84B1A2AC652280022A480 /* gothampro_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE72AC652280022A480 /* gothampro_blackitalic.ttf */; };
+		04C84B1B2AC652280022A480 /* GothamPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE82AC652280022A480 /* GothamPro-Bold.ttf */; };
+		04C84B1C2AC652280022A480 /* gothampro_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AE92AC652280022A480 /* gothampro_bolditalic.ttf */; };
+		04C84B1D2AC652280022A480 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AEA2AC652280022A480 /* Nunito-LightItalic.ttf */; };
+		04C84B1E2AC652280022A480 /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84AEB2AC652280022A480 /* Nunito-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040E47922AC6CBB30047B78A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		040E47952AC6D7F30047B78A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		040E47982AC6D9D50047B78A /* ApiExtencions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiExtencions .swift"; sourceTree = "<group>"; };
+		040E479E2AC6DB960047B78A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		040E47A12AC6DD4D0047B78A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		040E47A32AC6DDBE0047B78A /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		042F29442AC851E800E79221 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		042F29462AC8521800E79221 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		042F29482AC8524000E79221 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		042F294A2AC85F4E00E79221 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		042F294C2AC85FB100E79221 /* DataExtencions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtencions.swift; sourceTree = "<group>"; };
+		042F29502AC8606100E79221 /* GetUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		042F29532AC861D600E79221 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		042F29552AC861E700E79221 /* FinishRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationView.swift; sourceTree = "<group>"; };
+		042F29582AC8629600E79221 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		042F295A2AC862A300E79221 /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		042F295C2AC862C300E79221 /* NumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewModel.swift; sourceTree = "<group>"; };
 		04C0E5312AC154ED008CB682 /* neobis_front_auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neobis_front_auth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C0E5342AC154ED008CB682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C0E5362AC154ED008CB682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +121,46 @@
 		04C84AAF2AC64D3B0022A480 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		04C84AB22AC64FC10022A480 /* AnimatedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
 		04C84AB52AC6508D0022A480 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		04C84AB82AC652280022A480 /* gothampro_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_mediumitalic.ttf; sourceTree = "<group>"; };
+		04C84AB92AC652280022A480 /* GothamPro-Narrow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Narrow-Bold.ttf"; sourceTree = "<group>"; };
+		04C84ABA2AC652280022A480 /* GothamPro-Narrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Narrow.ttf"; sourceTree = "<group>"; };
+		04C84ABB2AC652280022A480 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		04C84AC82AC652280022A480 /* GothamPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		04C84AC92AC652280022A480 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		04C84ACA2AC652280022A480 /* gothampro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_medium.ttf; sourceTree = "<group>"; };
+		04C84ACB2AC652280022A480 /* GothamPro-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-MediumItalic.ttf"; sourceTree = "<group>"; };
+		04C84ACC2AC652280022A480 /* gothampro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro.ttf; sourceTree = "<group>"; };
+		04C84ACD2AC652280022A480 /* GothamPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Medium.ttf"; sourceTree = "<group>"; };
+		04C84ACE2AC652280022A480 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		04C84ACF2AC652280022A480 /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		04C84AD02AC652280022A480 /* GothamPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		04C84AD12AC652280022A480 /* GothamPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Black.ttf"; sourceTree = "<group>"; };
+		04C84AD22AC652280022A480 /* GothamProNarrow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamProNarrow-Bold.ttf"; sourceTree = "<group>"; };
+		04C84AD32AC652280022A480 /* GothamPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04C84AD42AC652280022A480 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		04C84AD52AC652280022A480 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		04C84AD62AC652280022A480 /* gothampro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bold.ttf; sourceTree = "<group>"; };
+		04C84AD72AC652280022A480 /* gothampro_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_black.ttf; sourceTree = "<group>"; };
+		04C84AD82AC652280022A480 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		04C84AD92AC652280022A480 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		04C84ADA2AC652280022A480 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04C84ADB2AC652280022A480 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		04C84ADC2AC652280022A480 /* GothamProNarrow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamProNarrow-Medium.ttf"; sourceTree = "<group>"; };
+		04C84ADD2AC652280022A480 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		04C84ADE2AC652280022A480 /* gothampro_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_italic.ttf; sourceTree = "<group>"; };
+		04C84ADF2AC652280022A480 /* gothampro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_light.ttf; sourceTree = "<group>"; };
+		04C84AE02AC652280022A480 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		04C84AE12AC652280022A480 /* GothamPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Italic.ttf"; sourceTree = "<group>"; };
+		04C84AE22AC652280022A480 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		04C84AE32AC652280022A480 /* GothamPro-Narrow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Narrow-Medium.ttf"; sourceTree = "<group>"; };
+		04C84AE42AC652280022A480 /* gothampro_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_lightitalic.ttf; sourceTree = "<group>"; };
+		04C84AE52AC652280022A480 /* GothamPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Light.ttf"; sourceTree = "<group>"; };
+		04C84AE62AC652280022A480 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		04C84AE72AC652280022A480 /* gothampro_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_blackitalic.ttf; sourceTree = "<group>"; };
+		04C84AE82AC652280022A480 /* GothamPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamPro-Bold.ttf"; sourceTree = "<group>"; };
+		04C84AE92AC652280022A480 /* gothampro_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bolditalic.ttf; sourceTree = "<group>"; };
+		04C84AEA2AC652280022A480 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		04C84AEB2AC652280022A480 /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +177,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E47912AC6CB8F0047B78A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				040E47922AC6CBB30047B78A /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		040E47942AC6D7D70047B78A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				040E47952AC6D7F30047B78A /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		040E47972AC6D9960047B78A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				040E47982AC6D9D50047B78A /* ApiExtencions .swift */,
+				042F294C2AC85FB100E79221 /* DataExtencions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		040E479D2AC6DB720047B78A /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				040E479E2AC6DB960047B78A /* AuthManager.swift */,
+			);
+			path = AuthManager;
+			sourceTree = "<group>";
+		};
+		040E47A02AC6DD220047B78A /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				040E47A12AC6DD4D0047B78A /* CustomTabBarController.swift */,
+				040E47A32AC6DDBE0047B78A /* CustomTabBar.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		042F29432AC851D600E79221 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				042F29442AC851E800E79221 /* PasswordView.swift */,
+				042F29462AC8521800E79221 /* PasswordViewController.swift */,
+				042F29482AC8524000E79221 /* PasswordViewModel.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		042F294E2AC8604100E79221 /* GetUserData */ = {
+			isa = PBXGroup;
+			children = (
+				042F29502AC8606100E79221 /* GetUserData.swift */,
+			);
+			path = GetUserData;
+			sourceTree = "<group>";
+		};
+		042F29522AC861B700E79221 /* FinishRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				042F29532AC861D600E79221 /* FinishRegistrationViewController.swift */,
+				042F29552AC861E700E79221 /* FinishRegistrationView.swift */,
+			);
+			path = FinishRegistration;
+			sourceTree = "<group>";
+		};
+		042F29572AC8627500E79221 /* AddNumber */ = {
+			isa = PBXGroup;
+			children = (
+				042F29582AC8629600E79221 /* NumberView.swift */,
+				042F295A2AC862A300E79221 /* NumberViewController.swift */,
+				042F295C2AC862C300E79221 /* NumberViewModel.swift */,
+			);
+			path = AddNumber;
+			sourceTree = "<group>";
+		};
 		04C0E5282AC154ED008CB682 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +275,12 @@
 		04C0E5332AC154ED008CB682 /* neobis_front_auth */ = {
 			isa = PBXGroup;
 			children = (
+				042F294E2AC8604100E79221 /* GetUserData */,
+				040E47A02AC6DD220047B78A /* CustomTabBar */,
+				040E479D2AC6DB720047B78A /* AuthManager */,
+				040E47972AC6D9960047B78A /* Helper */,
+				040E47942AC6D7D70047B78A /* Service */,
+				040E47912AC6CB8F0047B78A /* Model */,
 				04C84AB12AC64F860022A480 /* CustomTextFields */,
 				04C0E5482AC15518008CB682 /* View */,
 				04C0E5342AC154ED008CB682 /* AppDelegate.swift */,
@@ -98,11 +297,15 @@
 		04C0E5482AC15518008CB682 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042F29572AC8627500E79221 /* AddNumber */,
+				042F29522AC861B700E79221 /* FinishRegistration */,
+				042F29432AC851D600E79221 /* Password */,
 				04C84AB42AC6507A0022A480 /* Profile */,
 				04C84AA02AC64B8E0022A480 /* MainScreen */,
 				04C0E54C2AC15573008CB682 /* SplashScreen */,
 				04C84AA52AC64C3D0022A480 /* Login */,
 				04C84AAC2AC64CF90022A480 /* Registratoin */,
+				04C84AB72AC652280022A480 /* Fonts */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,8 +358,56 @@
 			isa = PBXGroup;
 			children = (
 				04C84AB52AC6508D0022A480 /* ProfileView.swift */,
+				042F294A2AC85F4E00E79221 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		04C84AB72AC652280022A480 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AB82AC652280022A480 /* gothampro_mediumitalic.ttf */,
+				04C84AB92AC652280022A480 /* GothamPro-Narrow-Bold.ttf */,
+				04C84ABA2AC652280022A480 /* GothamPro-Narrow.ttf */,
+				04C84ABB2AC652280022A480 /* Nunito-Medium.ttf */,
+				04C84AC82AC652280022A480 /* GothamPro-LightItalic.ttf */,
+				04C84AC92AC652280022A480 /* Nunito-ExtraBoldItalic.ttf */,
+				04C84ACA2AC652280022A480 /* gothampro_medium.ttf */,
+				04C84ACB2AC652280022A480 /* GothamPro-MediumItalic.ttf */,
+				04C84ACC2AC652280022A480 /* gothampro.ttf */,
+				04C84ACD2AC652280022A480 /* GothamPro-Medium.ttf */,
+				04C84ACE2AC652280022A480 /* Nunito-ExtraBold.ttf */,
+				04C84ACF2AC652280022A480 /* Nunito-ExtraLightItalic.ttf */,
+				04C84AD02AC652280022A480 /* GothamPro-BlackItalic.ttf */,
+				04C84AD12AC652280022A480 /* GothamPro-Black.ttf */,
+				04C84AD22AC652280022A480 /* GothamProNarrow-Bold.ttf */,
+				04C84AD32AC652280022A480 /* GothamPro-BoldItalic.ttf */,
+				04C84AD42AC652280022A480 /* Nunito-Light.ttf */,
+				04C84AD52AC652280022A480 /* Nunito-Regular.ttf */,
+				04C84AD62AC652280022A480 /* gothampro_bold.ttf */,
+				04C84AD72AC652280022A480 /* gothampro_black.ttf */,
+				04C84AD82AC652280022A480 /* Nunito-SemiBold.ttf */,
+				04C84AD92AC652280022A480 /* Nunito-Bold.ttf */,
+				04C84ADA2AC652280022A480 /* Nunito-BoldItalic.ttf */,
+				04C84ADB2AC652280022A480 /* Nunito-Black.ttf */,
+				04C84ADC2AC652280022A480 /* GothamProNarrow-Medium.ttf */,
+				04C84ADD2AC652280022A480 /* Nunito-ExtraLight.ttf */,
+				04C84ADE2AC652280022A480 /* gothampro_italic.ttf */,
+				04C84ADF2AC652280022A480 /* gothampro_light.ttf */,
+				04C84AE02AC652280022A480 /* Nunito-SemiBoldItalic.ttf */,
+				04C84AE12AC652280022A480 /* GothamPro-Italic.ttf */,
+				04C84AE22AC652280022A480 /* Nunito-BlackItalic.ttf */,
+				04C84AE32AC652280022A480 /* GothamPro-Narrow-Medium.ttf */,
+				04C84AE42AC652280022A480 /* gothampro_lightitalic.ttf */,
+				04C84AE52AC652280022A480 /* GothamPro-Light.ttf */,
+				04C84AE62AC652280022A480 /* Nunito-Italic.ttf */,
+				04C84AE72AC652280022A480 /* gothampro_blackitalic.ttf */,
+				04C84AE82AC652280022A480 /* GothamPro-Bold.ttf */,
+				04C84AE92AC652280022A480 /* gothampro_bolditalic.ttf */,
+				04C84AEA2AC652280022A480 /* Nunito-LightItalic.ttf */,
+				04C84AEB2AC652280022A480 /* Nunito-MediumItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +479,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C0E5412AC154EE008CB682 /* LaunchScreen.storyboard in Resources */,
+				04C84B122AC652280022A480 /* gothampro_light.ttf in Resources */,
+				04C84AFD2AC652280022A480 /* gothampro_medium.ttf in Resources */,
+				04C84B1C2AC652280022A480 /* gothampro_bolditalic.ttf in Resources */,
+				04C84B042AC652280022A480 /* GothamPro-Black.ttf in Resources */,
+				04C84AEC2AC652280022A480 /* gothampro_mediumitalic.ttf in Resources */,
+				04C84B072AC652280022A480 /* Nunito-Light.ttf in Resources */,
+				04C84B002AC652280022A480 /* GothamPro-Medium.ttf in Resources */,
+				04C84B092AC652280022A480 /* gothampro_bold.ttf in Resources */,
+				04C84B082AC652280022A480 /* Nunito-Regular.ttf in Resources */,
+				04C84B132AC652280022A480 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				04C0E53E2AC154EE008CB682 /* Assets.xcassets in Resources */,
+				04C84B1D2AC652280022A480 /* Nunito-LightItalic.ttf in Resources */,
+				04C84AEE2AC652280022A480 /* GothamPro-Narrow.ttf in Resources */,
+				04C84B0B2AC652280022A480 /* Nunito-SemiBold.ttf in Resources */,
+				04C84AEF2AC652280022A480 /* Nunito-Medium.ttf in Resources */,
+				04C84AFB2AC652280022A480 /* GothamPro-LightItalic.ttf in Resources */,
+				04C84B192AC652280022A480 /* Nunito-Italic.ttf in Resources */,
+				04C84B152AC652280022A480 /* Nunito-BlackItalic.ttf in Resources */,
+				04C84B182AC652280022A480 /* GothamPro-Light.ttf in Resources */,
+				04C84B032AC652280022A480 /* GothamPro-BlackItalic.ttf in Resources */,
+				04C84B0A2AC652280022A480 /* gothampro_black.ttf in Resources */,
+				04C84B022AC652280022A480 /* Nunito-ExtraLightItalic.ttf in Resources */,
+				04C84AFC2AC652280022A480 /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				04C84B0C2AC652280022A480 /* Nunito-Bold.ttf in Resources */,
+				04C84B1A2AC652280022A480 /* gothampro_blackitalic.ttf in Resources */,
+				04C84B162AC652280022A480 /* GothamPro-Narrow-Medium.ttf in Resources */,
+				04C84AFE2AC652280022A480 /* GothamPro-MediumItalic.ttf in Resources */,
+				04C84B0E2AC652280022A480 /* Nunito-Black.ttf in Resources */,
+				04C84B0F2AC652280022A480 /* GothamProNarrow-Medium.ttf in Resources */,
+				04C84B172AC652280022A480 /* gothampro_lightitalic.ttf in Resources */,
+				04C84AED2AC652280022A480 /* GothamPro-Narrow-Bold.ttf in Resources */,
+				04C84B1B2AC652280022A480 /* GothamPro-Bold.ttf in Resources */,
 				04C0E53C2AC154ED008CB682 /* Main.storyboard in Resources */,
+				04C84B1E2AC652280022A480 /* Nunito-MediumItalic.ttf in Resources */,
+				04C84B012AC652280022A480 /* Nunito-ExtraBold.ttf in Resources */,
+				04C84AFF2AC652280022A480 /* gothampro.ttf in Resources */,
+				04C84B052AC652280022A480 /* GothamProNarrow-Bold.ttf in Resources */,
+				04C84B062AC652280022A480 /* GothamPro-BoldItalic.ttf in Resources */,
+				04C84B142AC652280022A480 /* GothamPro-Italic.ttf in Resources */,
+				04C84B0D2AC652280022A480 /* Nunito-BoldItalic.ttf in Resources */,
+				04C84B112AC652280022A480 /* gothampro_italic.ttf in Resources */,
+				04C84B102AC652280022A480 /* Nunito-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,18 +532,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C0E5392AC154ED008CB682 /* ViewController.swift in Sources */,
+				040E47962AC6D7F30047B78A /* APIService.swift in Sources */,
+				040E47A42AC6DDBE0047B78A /* CustomTabBar.swift in Sources */,
 				04C84AB62AC6508D0022A480 /* ProfileView.swift in Sources */,
 				04C84AA72AC64C4E0022A480 /* LoginView.swift in Sources */,
 				04C0E5352AC154ED008CB682 /* AppDelegate.swift in Sources */,
 				04C84AB02AC64D3B0022A480 /* RegistrationViewController.swift in Sources */,
 				04C0E5372AC154ED008CB682 /* SceneDelegate.swift in Sources */,
+				040E479F2AC6DB960047B78A /* AuthManager.swift in Sources */,
+				042F295D2AC862C300E79221 /* NumberViewModel.swift in Sources */,
+				042F294D2AC85FB100E79221 /* DataExtencions.swift in Sources */,
+				040E47A22AC6DD4D0047B78A /* CustomTabBarController.swift in Sources */,
+				042F29512AC8606100E79221 /* GetUserData.swift in Sources */,
 				04C84AA92AC64C8B0022A480 /* LoginViewController.swift in Sources */,
+				040E47932AC6CBB30047B78A /* Model.swift in Sources */,
+				040E47992AC6D9D50047B78A /* ApiExtencions .swift in Sources */,
+				042F29562AC861E700E79221 /* FinishRegistrationView.swift in Sources */,
 				04C84AA42AC64BE70022A480 /* MainViewController.swift in Sources */,
 				04C84AA22AC64BC10022A480 /* MainView.swift in Sources */,
+				042F294B2AC85F4E00E79221 /* ProfileViewController.swift in Sources */,
+				042F29452AC851E800E79221 /* PasswordView.swift in Sources */,
 				04C0E54E2AC15596008CB682 /* SplashScreenView.swift in Sources */,
+				042F29472AC8521800E79221 /* PasswordViewController.swift in Sources */,
 				04C84AAB2AC64C9F0022A480 /* LoginViewModel.swift in Sources */,
+				042F29542AC861D600E79221 /* FinishRegistrationViewController.swift in Sources */,
 				04C84AB32AC64FC10022A480 /* AnimatedTextField.swift in Sources */,
 				04C84AAE2AC64D1C0022A480 /* RegistrationView.swift in Sources */,
+				042F29492AC8524000E79221 /* PasswordViewModel.swift in Sources */,
+				042F295B2AC862A300E79221 /* NumberViewController.swift in Sources */,
+				042F29592AC8629600E79221 /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

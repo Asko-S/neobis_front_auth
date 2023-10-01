@@ -1,9 +1,6 @@
-//
 //  ViewController.swift
 //  neobis_front_auth
-//
-//  Created by Askar Soronbekov on 25/9/23.
-//
+//  Created by Askar Soronbekov
 
 import UIKit
 
