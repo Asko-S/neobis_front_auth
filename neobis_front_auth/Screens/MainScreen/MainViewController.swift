@@ -9,13 +9,35 @@ import SnapKit
 class MainViewController: UIViewController {
     
     let contentView = MainView()
+    var getProduct: ProductProtocol!
+    
+    init(getProduct: ProductProtocol!) {
+        self.getProduct = getProduct
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        getProductData()
     }
     
+    func getProductData() {
+        getProduct.fetchProductData() { [weak self] result in
+            switch result {
+            case .success(let productData):
+//                print(productData)
+                self?.parseProductData(productData: productData)
+            case .failure(let error):
+                print("Failed to fetch product data:", error)
+            }
+        }
+    }
     
     func parseProductData(productData: [[String: Any]]) {
         var products: [[String: Any]] = []
@@ -51,4 +73,3 @@ class MainViewController: UIViewController {
         }
     }
 }
-

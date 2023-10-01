@@ -50,7 +50,7 @@ class MainView: UIView {
         
         return view
     }()
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -166,7 +166,7 @@ extension MainView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayo
                 }
             }.resume()
         }
-
+        
         
         return cell
     }
@@ -181,4 +181,3 @@ extension MainView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayo
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
-
