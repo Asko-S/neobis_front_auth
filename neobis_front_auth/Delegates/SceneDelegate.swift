@@ -1,9 +1,6 @@
-//
 //  SceneDelegate.swift
 //  neobis_front_auth
-//
-//  Created by Askar Soronbekov on 25/9/23.
-//
+//  Created by Askar Soronbekov
 
 import UIKit
 
@@ -11,12 +8,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        window?.rootViewController = UINavigationController(rootViewController: LoginViewController(loginProtocol: LoginViewModel()))
+        
+        
+        // Provide actual values for first_name, last_name, birthday, and photo
+//        let first_name = "John"
+//        let last_name = "Doe"
+//        let birthday = "1990-01-01"
+//        let photo = Data()  // You can replace this with actual photo data
+//
+//        // Initialize NumberViewController and NumberViewModel
+//        let numberViewModel = NumberViewModel(first_name: first_name, last_name: last_name, birthday: birthday, photo: photo)
+//        let numberViewController = NumberViewController(numberProtocol: numberViewModel)
+//
+//        // Set the root view controller and make the window key and visible
+//        window?.rootViewController = UINavigationController(rootViewController: numberViewController)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

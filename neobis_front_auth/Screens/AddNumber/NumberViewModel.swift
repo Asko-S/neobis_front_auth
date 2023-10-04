@@ -36,7 +36,7 @@ class NumberViewModel: NumberProtocol {
     }
     
     func fullRegister(phone_number: String) {
-        let endpoint = "account/full_register/"
+        let endpoint = "auth/profile-ubdate"
         
         let parameters: [String: Any] = [
             "first_name": first_name,

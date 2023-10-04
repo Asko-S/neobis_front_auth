@@ -61,7 +61,7 @@ class FinishRegViewController: UIViewController {
     func parseUserData(_ userData: [String: Any]) {
         
         if let photoURLString = userData["photo"] as? String,
-           let photoURL = URL(string: "http://16.16.200.195/" + photoURLString) {
+           let photoURL = URL(string: "http://157.230.18.205:8000/" + photoURLString) {
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: photoURL),
                    let image = UIImage(data: imageData) {

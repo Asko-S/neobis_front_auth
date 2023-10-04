@@ -10,7 +10,7 @@ import Alamofire
 import AlamofireImage
 
 class APIService {
-    let baseURL = "http://207.154.198.7:8000/"
+    let baseURL = "http://157.230.18.205:8000/"
     
     func post(endpoint: String, parameters: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = URL(string: baseURL + endpoint) else { return }
