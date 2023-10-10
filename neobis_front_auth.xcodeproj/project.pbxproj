@@ -226,6 +226,7 @@
 		040E47942AC6D7D70047B78A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				040E479D2AC6DB720047B78A /* AuthManager */,
 				040E47952AC6D7F30047B78A /* APIService.swift */,
 			);
 			path = Service;
@@ -334,6 +335,15 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		041F75762AD53D92000E0285 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				04C84AB12AC64F860022A480 /* CustomTextFields */,
+				040E47A02AC6DD220047B78A /* CustomTabBar */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		042F29432AC851D600E79221 /* Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,14 +400,12 @@
 		04C0E5332AC154ED008CB682 /* neobis_front_auth */ = {
 			isa = PBXGroup;
 			children = (
+				041F75762AD53D92000E0285 /* Custom */,
 				041794542AC9E5D000B1F45B /* Delegates */,
 				042F294E2AC8604100E79221 /* GetUserData */,
-				040E47A02AC6DD220047B78A /* CustomTabBar */,
-				040E479D2AC6DB720047B78A /* AuthManager */,
 				040E47972AC6D9960047B78A /* Helper */,
 				040E47942AC6D7D70047B78A /* Service */,
 				040E47912AC6CB8F0047B78A /* Model */,
-				04C84AB12AC64F860022A480 /* CustomTextFields */,
 				04C0E5482AC15518008CB682 /* Screens */,
 				04C0E5382AC154ED008CB682 /* ViewController.swift */,
 				04C0E53A2AC154ED008CB682 /* Main.storyboard */,

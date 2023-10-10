@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController {
         }
         
         if let photoURLString = userData["photo"] as? String,
-           let photoURL = URL(string: "http://16.16.200.195/" + photoURLString) {
+           let photoURL = URL(string: "https://www.ishak-backender.org.kg/" + photoURLString) {
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: photoURL),
                    let image = UIImage(data: imageData) {

@@ -26,7 +26,7 @@ class GetUserViewModel: GetUserProtocol {
             "Authorization": "Bearer \(accessToken)"
         ]
         
-        AF.request("http://157.230.18.205:8000/auth/profile/", headers: headers).responseJSON { response in
+        AF.request("https://www.ishak-backender.org.kg/auth/profile-update/", headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
                 if let userData = value as? [String: Any] {

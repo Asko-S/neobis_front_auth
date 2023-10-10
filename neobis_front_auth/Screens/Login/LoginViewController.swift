@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
     }
     
     @objc func enterButtonPressed() {
-        
         if mainView.enterButton.backgroundColor != UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1) {
             
             guard let name = mainView.nameField.text, let password = mainView.passwordField.text else {
@@ -54,23 +53,22 @@ class LoginViewController: UIViewController {
             }
             
             loginProtocol.login(username: name, password: password)
+                    let vc = ProfileViewController(getUserProtocol: GetUserViewModel())
+                    navigationController?.pushViewController(vc, animated: true)
         }
     }
     
+    
     func handleSuccessfulLogin(_ data: Data) {
-
-        let vc = CustomTabBarC()
-        vc.modalPresentationStyle = .fullScreen
         
-//        if let viewControllers = vc.viewControllers {
-//            let lastIndex = viewControllers.count - 1
-//            vc.selectedIndex = lastIndex
-//        }
+        print ("success")
         
-        present(vc, animated: true, completion: nil)
+//        let vc = ProfileViewController(getUserProtocol: GetUserViewModel())
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     func handleLoginFailure(_ error: Error) {
+
         mainView.statusLabel.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.mainView.statusLabel.isHidden = true

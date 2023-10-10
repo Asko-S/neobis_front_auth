@@ -36,17 +36,17 @@ class NumberViewModel: NumberProtocol {
     }
     
     func fullRegister(phone_number: String) {
-        let endpoint = "auth/profile-ubdate"
+        let endpoint = "auth/profile-update/"
         
         let parameters: [String: Any] = [
+            "avatar": photo,
             "first_name": first_name,
             "last_name": last_name,
-            "birthday": birthday,
-            "phone_number": phone_number,
-            "photo": photo
+            "date_of_birth": birthday,
+            "phone_number": phone_number
         ]
         
-        apiService.postWithBearerToken(endpoint: endpoint, parameters: parameters, bearerToken: AuthManager.shared.accessToken ?? "") { [weak self] result in
+        apiService.putWithBearerToken(endpoint: endpoint, parameters: parameters, bearerToken: AuthManager.shared.accessToken ?? "") { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
@@ -64,4 +64,3 @@ class NumberViewModel: NumberProtocol {
         }
     }
 }
-

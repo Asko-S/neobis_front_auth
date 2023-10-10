@@ -8,24 +8,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let _ = (scene as? UIWindowScene) else { return }
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController(loginProtocol: LoginViewModel()))
-        
-        
-        // Provide actual values for first_name, last_name, birthday, and photo
-//        let first_name = "John"
-//        let last_name = "Doe"
-//        let birthday = "1990-01-01"
-//        let photo = Data()  // You can replace this with actual photo data
-//
-//        // Initialize NumberViewController and NumberViewModel
-//        let numberViewModel = NumberViewModel(first_name: first_name, last_name: last_name, birthday: birthday, photo: photo)
-//        let numberViewController = NumberViewController(numberProtocol: numberViewModel)
-//
-//        // Set the root view controller and make the window key and visible
-//        window?.rootViewController = UINavigationController(rootViewController: numberViewController)
+//        window?.rootViewController = UINavigationController(rootViewController: ProductViewController(Product: ProductViewModel(), productProtocol: GetUserViewModel()))
+        window?.rootViewController = UINavigationController(rootViewController: CustomTabBarC())
         window?.makeKeyAndVisible()
     }
 

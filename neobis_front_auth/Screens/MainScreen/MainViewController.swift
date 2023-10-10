@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
         var products: [[String: Any]] = []
         for data in productData {
             if let id = data["id"] as? Int,
-               let user = data["user"] as? String,
+               let user = data["name"] as? String,
                let images = data["images"] as? [String],
                let title = data["title"] as? String,
                let price = data["price"] as? String,

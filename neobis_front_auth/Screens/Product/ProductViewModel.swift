@@ -31,7 +31,7 @@ class ProductViewModel: ProductProtocol {
         }
         
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(accessToken)"
+            "Authorization ": "Bearer \(accessToken)"
         ]
         
         apiService.fetchProductData(headers: headers) { result in

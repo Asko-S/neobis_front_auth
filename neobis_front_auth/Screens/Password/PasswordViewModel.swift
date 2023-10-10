@@ -31,7 +31,7 @@ class PasswordViewModel: PasswordProtocol {
     func register(password: String, password_repeat: String) {
         let parameters: [String: Any] = ["username": userName, "email": email, "password": password, "password_confirm": password_repeat]
         
-        apiService.post(endpoint: "auth/register", parameters: parameters) { [weak self] (result) in
+        apiService.post(endpoint: "auth/register/", parameters: parameters) { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):

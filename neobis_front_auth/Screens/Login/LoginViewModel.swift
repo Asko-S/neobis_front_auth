@@ -25,7 +25,7 @@ class LoginViewModel: LoginProtocol {
     func login(username: String, password: String) {
         let parameters: [String: Any] = ["username": username, "password": password]
         
-        apiService.post(endpoint: "auth/login", parameters: parameters) { [weak self] (result) in
+        apiService.post(endpoint: "auth/login/", parameters: parameters) { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):

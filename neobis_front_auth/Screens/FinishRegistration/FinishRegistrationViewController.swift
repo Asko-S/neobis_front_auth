@@ -61,7 +61,7 @@ class FinishRegViewController: UIViewController {
     func parseUserData(_ userData: [String: Any]) {
         
         if let photoURLString = userData["photo"] as? String,
-           let photoURL = URL(string: "http://157.230.18.205:8000/" + photoURLString) {
+           let photoURL = URL(string: "https://www.ishak-backender.org.kg/" + photoURLString) {
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: photoURL),
                    let image = UIImage(data: imageData) {
@@ -82,10 +82,24 @@ class FinishRegViewController: UIViewController {
             }
         }
         
+        if let lastName = userData["last_name"] as? String {
+            self.lastName = lastName
+            DispatchQueue.main.async {
+                self.mainView.lastNameField.text = lastName
+            }
+        }
+        
         if let username = userData["username"] as? String {
             self.nickName = username
             DispatchQueue.main.async {
                 self.mainView.nickNameField.text = username
+            }
+        }
+        
+        if let birthday = userData["date_of_birth"] as? String {
+            self.birthday = birthday
+            DispatchQueue.main.async {
+                self.mainView.birthdayField.text = birthday
             }
         }
         
@@ -96,19 +110,6 @@ class FinishRegViewController: UIViewController {
             }
         }
         
-        if let lastName = userData["last_name"] as? String {
-            self.lastName = lastName
-            DispatchQueue.main.async {
-                self.mainView.lastNameField.text = lastName
-            }
-        }
-        
-        if let birthday = userData["birthday"] as? String {
-            self.birthday = birthday
-            DispatchQueue.main.async {
-                self.mainView.birthdayField.text = birthday
-            }
-        }
         
         if let phoneNumber = userData["phone_number"] as? String {
             self.phoneNumber = phoneNumber

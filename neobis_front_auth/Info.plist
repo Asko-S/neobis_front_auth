@@ -2,6 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportationSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict/>
+		<key>ishak-backender.org.kg</key>
+		<dict/>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+		<false/>
+		<key>NSExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please allow access to library</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFProText-Medium.ttf</string>
+		<string>GothamPro-Bold.ttf</string>
+		<string>GothamPro-Medium.ttf</string>
+		<string>GothamPro-Italic.ttf</string>
+		<string>GothamPro.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
