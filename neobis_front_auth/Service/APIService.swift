@@ -3,32 +3,17 @@
 //  neobis_front_auth
 //
 //  Created by Askar Soronbekov on 29/9/23.
-//
 
 import Foundation
 import Alamofire
 import AlamofireImage
 
-enum APIServiceError: Error {
-    case invalidURL
-    case invalidResponse
-    case requestFailed(statusCode: Int)
-    case emptyResponseData
-    case dataParsingError
-}
-
-struct APIServiceConstants {
-    static let baseURL = "https://www.ishak-backender.org.kg/"
-}
-
 class APIService {
     
-    func post<T: Codable>(endpoint: String, parameters: [String: Any], completion: @escaping (Result<T, Error>) -> Void) {
-        guard let url = URL(string: APIServiceConstants.baseURL + endpoint) else {
-            completion(.failure(APIServiceError.invalidURL))
-            return
-        }
-        
+    let baseURL = "https://www.ishak-backender.org.kg/"
+    
+    func post(endpoint: String, parameters: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let url = URL(string: baseURL + endpoint) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -40,26 +25,37 @@ class APIService {
             return
         }
         
-        AF.request(request).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid response"])
+                completion(.failure(error))
+                return
+            }
+            
+            let statusCode = httpResponse.statusCode
+            if 200...299 ~= statusCode {
+                if let data = data {
+                    completion(.success(data))
+                } else {
+                    let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Empty response data"])
                     completion(.failure(error))
                 }
-            case .failure(let error):
+            } else {
+                let error = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Request failed with status code: \(statusCode)"])
                 completion(.failure(error))
             }
         }
+        task.resume()
     }
     
-    func putWithBearerToken<T: Codable>(endpoint: String, parameters: [String: Any], bearerToken: String, completion: @escaping (Result<T, Error>) -> Void) {
-        guard let url = URL(string: APIServiceConstants.baseURL + endpoint) else {
-            completion(.failure(APIServiceError.invalidURL))
-            return
-        }
+    
+    func putWithBearerToken(endpoint: String, parameters: [String: Any], bearerToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let url = URL(string: baseURL + endpoint) else { return }
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(bearerToken)"
@@ -83,20 +79,15 @@ class APIService {
         ).responseData { response in
             switch response.result {
             case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(error))
-                }
+                completion(.success(data))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
     
-    func postImagesWithBearerToken<T: Codable>(endpoint: String, parameters: [String: Any], imageDatas: [Data], bearerToken: String, completion: @escaping (Result<T, Error>) -> Void) {
-        let url = APIServiceConstants.baseURL + endpoint
+    func postImagesWithBearerToken(endpoint: String, parameters: [String: Any], imageDatas: [Data], bearerToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let url = baseURL + endpoint
         let boundary = "Boundary-\(UUID().uuidString)"
         let mimeType = "image/*"
         
@@ -123,13 +114,14 @@ class APIService {
             to: url,
             method: .post,
             headers: headers
-        ).responseData { response in
+        )
+        .response { response in
             switch response.result {
             case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
+                if let data = data {
+                    completion(.success(data))
+                } else {
+                    let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Empty response data"])
                     completion(.failure(error))
                 }
             case .failure(let error):
@@ -138,8 +130,8 @@ class APIService {
         }
     }
     
-    func putImagesWithBearerToken<T: Codable>(endpoint: String, parameters: [String: Any], imageDatas: [Data], bearerToken: String, completion: @escaping (Result<T, Error>) -> Void) {
-        let url = APIServiceConstants.baseURL + endpoint
+    func putImagesWithBearerToken(endpoint: String, parameters: [String: Any], imageDatas: [Data], bearerToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let url = baseURL + endpoint
         let boundary = "Boundary-\(UUID().uuidString)"
         let mimeType = "image/*"
         
@@ -166,13 +158,14 @@ class APIService {
             to: url,
             method: .put,
             headers: headers
-        ).responseData { response in
+        )
+        .response { response in
             switch response.result {
             case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
+                if let data = data {
+                    completion(.success(data))
+                } else {
+                    let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Empty response data"])
                     completion(.failure(error))
                 }
             case .failure(let error):
@@ -181,14 +174,15 @@ class APIService {
         }
     }
     
-    func fetchProductData<T: Codable>(headers: HTTPHeaders, completion: @escaping (Result<T, Error>) -> Void) {
-        AF.request("https://www.ishak-backender.org.kg/products/product/api/", headers: headers).responseData { response in
+    
+    func fetchProductData(headers: HTTPHeaders, completion: @escaping (Result<[[String: Any]], Error>) -> Void) {
+        AF.request("https://www.ishak-backender.org.kg/products/product/api/", headers: headers).responseJSON { response in
             switch response.result {
-            case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
+            case .success(let value):
+                if let dataArray = value as? [[String: Any]] {
+                    completion(.success(dataArray))
+                } else {
+                    let error = NSError(domain: "ProductDataParsingError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to parse product data"])
                     completion(.failure(error))
                 }
             case .failure(let error):
@@ -197,7 +191,8 @@ class APIService {
         }
     }
     
-    func getWithBearerToken<T: Codable>(endpoint: String, bearerToken: String, completion: @escaping (Result<T, Error>) -> Void) {
+    
+    func getWithBearerToken(endpoint: String, bearerToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
         let url = URL(string: "https://www.ishak-backender.org.kg/" + endpoint)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -206,21 +201,16 @@ class APIService {
         AF.request(request).responseData { response in
             switch response.result {
             case .success(let data):
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(error))
-                }
+                completion(.success(data))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
     
-    func deleteData<T: Codable>(id: Int, bearerToken: String, completion: @escaping (Result<T, Error>) -> Void) {
+    func deleteData(id: Int, bearerToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
         let endpoint = "product/\(id)/"
-        let url = APIServiceConstants.baseURL + endpoint
+        let url = baseURL + endpoint
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(bearerToken)"
@@ -228,18 +218,26 @@ class APIService {
         
         AF.request(url, method: .delete, headers: headers)
             .validate(statusCode: 200..<400)
-            .responseData { response in
+            .response { response in
                 switch response.result {
                 case .success(let data):
-                    do {
-                        let decodedData = try JSONDecoder().decode(T.self, from: data)
-                        completion(.success(decodedData))
-                    } catch {
-                        completion(.failure(error))
+                    if let data = data {
+                        completion(.success(data))
+                        print("Delete success")
+                    } else {
+                        print("Delete successfull")
                     }
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }
+    }
+}
+
+extension NSMutableData {
+    func appendString(_ string: String) {
+        if let data = string.data(using: .utf8) {
+            append(data)
+        }
     }
 }

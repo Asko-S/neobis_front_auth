@@ -14,7 +14,7 @@ class FinishRegViewController: UIViewController {
     
     let mainView = FinishRegView()
     var firstName: String = ""
-    var nickName: String = ""
+    var userName: String = ""
     var email: String = ""
     var lastName: String = ""
     var birthday: String = ""
@@ -90,7 +90,7 @@ class FinishRegViewController: UIViewController {
         }
         
         if let username = userData["username"] as? String {
-            self.nickName = username
+            self.userName = username
             DispatchQueue.main.async {
                 self.mainView.nickNameField.text = username
             }

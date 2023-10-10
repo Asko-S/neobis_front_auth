@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040E47932AC6CBB30047B78A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47922AC6CBB30047B78A /* Model.swift */; };
 		040E47962AC6D7F30047B78A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47952AC6D7F30047B78A /* APIService.swift */; };
-		040E47992AC6D9D50047B78A /* ApiExtencions .swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47982AC6D9D50047B78A /* ApiExtencions .swift */; };
 		040E479F2AC6DB960047B78A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E479E2AC6DB960047B78A /* AuthManager.swift */; };
 		040E47A22AC6DD4D0047B78A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47A12AC6DD4D0047B78A /* CustomTabBarController.swift */; };
 		040E47A42AC6DDBE0047B78A /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E47A32AC6DDBE0047B78A /* CustomTabBar.swift */; };
@@ -107,7 +106,6 @@
 /* Begin PBXFileReference section */
 		040E47922AC6CBB30047B78A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		040E47952AC6D7F30047B78A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		040E47982AC6D9D50047B78A /* ApiExtencions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiExtencions .swift"; sourceTree = "<group>"; };
 		040E479E2AC6DB960047B78A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		040E47A12AC6DD4D0047B78A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		040E47A32AC6DDBE0047B78A /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -235,9 +233,7 @@
 		040E47972AC6D9960047B78A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				040E47982AC6D9D50047B78A /* ApiExtencions .swift */,
-				042F294C2AC85FB100E79221 /* DataExtencions.swift */,
-				041794442AC9E35800B1F45B /* StringExtensions.swift */,
+				041F75772AD5405B000E0285 /* Extencions  */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -342,6 +338,15 @@
 				040E47A02AC6DD220047B78A /* CustomTabBar */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		041F75772AD5405B000E0285 /* Extencions  */ = {
+			isa = PBXGroup;
+			children = (
+				042F294C2AC85FB100E79221 /* DataExtencions.swift */,
+				041794442AC9E35800B1F45B /* StringExtensions.swift */,
+			);
+			path = "Extencions ";
 			sourceTree = "<group>";
 		};
 		042F29432AC851D600E79221 /* Password */ = {
@@ -687,7 +692,6 @@
 				04C84AA92AC64C8B0022A480 /* LoginViewController.swift in Sources */,
 				040E47932AC6CBB30047B78A /* Model.swift in Sources */,
 				041794492AC9E3A400B1F45B /* NumberTextField.swift in Sources */,
-				040E47992AC6D9D50047B78A /* ApiExtencions .swift in Sources */,
 				042F29562AC861E700E79221 /* FinishRegistrationView.swift in Sources */,
 				04C84AA42AC64BE70022A480 /* MainViewController.swift in Sources */,
 				04C84AA22AC64BC10022A480 /* MainView.swift in Sources */,

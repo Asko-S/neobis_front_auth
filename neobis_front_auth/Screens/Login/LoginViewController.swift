@@ -54,7 +54,6 @@ class LoginViewController: UIViewController {
             
             loginProtocol.login(username: name, password: password)
                     let vc = ProfileViewController(getUserProtocol: GetUserViewModel())
-                    navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -63,8 +62,8 @@ class LoginViewController: UIViewController {
         
         print ("success")
         
-//        let vc = ProfileViewController(getUserProtocol: GetUserViewModel())
-//        navigationController?.pushViewController(vc, animated: true)
+        let vc = ProfileViewController(getUserProtocol: GetUserViewModel())
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func handleLoginFailure(_ error: Error) {

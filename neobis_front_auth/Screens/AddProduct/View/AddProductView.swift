@@ -1,9 +1,7 @@
 //
 //  AddProductView.swift
 //  neobis_front_auth
-//
 //  Created by Askar Soronbekov on 1/10/23.
-//
 
 import Foundation
 import UIKit

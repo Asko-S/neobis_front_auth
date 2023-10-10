@@ -48,13 +48,6 @@ class AddProductViewController: UIViewController{
         guard let shortDescription = containView.descriptionOne.text else { return }
         guard let longDescription = containView.descriptionTwo.text else { return }
         
-//        var imageDatas: [Data] = []
-//        for image in containView.images {
-//            if let imageData = image.jpegData(compressionQuality: 1.0) {
-//                imageDatas.append(imageData)
-//            }
-//        }
-        
         addProductProtocol.addProduct(images: containView.images, title: title, price: price, shortDescription: shortDescription, fullDescription: longDescription)
         dismiss(animated: true, completion: nil)
     }

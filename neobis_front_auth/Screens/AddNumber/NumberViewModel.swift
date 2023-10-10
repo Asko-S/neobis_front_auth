@@ -1,9 +1,6 @@
-//
 //  NumberViewModel.swift
 //  neobis_front_auth
-//
 //  Created by Askar Soronbekov on 30/9/23.
-//
 
 import Foundation
 import Alamofire
